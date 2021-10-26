@@ -1,4 +1,3 @@
-FROM node:14-slim
+FROM node:14-alpine
 
-RUN apt-get update
-RUN apt-get install jq curl -y # for shelm
+RUN apk --update add jq curl # for shelm
