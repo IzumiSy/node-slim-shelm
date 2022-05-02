@@ -27,6 +27,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: ghcr.io/${{ github.repository_owner }}/node-slim-shelm:node-16.14.0
+          tags: "ghcr.io/${{ github.repository_owner }}/node-slim-shelm:node-16.14.0"
           platforms:
-            - linux/amd64
+            - "linux/amd64"
