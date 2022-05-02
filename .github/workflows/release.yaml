@@ -4,13 +4,13 @@ on:
   push:
 
 jobs:
-  aaa:
+  release:
     runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
     steps:
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Login to GHCR
         uses: docker/login-action@v1
