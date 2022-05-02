@@ -2,8 +2,6 @@ name: release
 
 on:
   push:
-    paths:
-      - '*'
 
 jobs:
   release:
@@ -11,9 +9,7 @@ jobs:
     permissions:
       packages: write
       contents: read
-
     steps:
-      - name: checkout
         uses: actions/checkout@v3
 
       - name: Login to GHCR
@@ -28,5 +24,3 @@ jobs:
         with:
           push: false
           tags: "ghcr.io/${{ github.repository_owner }}/node-slim-shelm:node-16.14.0"
-          platforms:
-            - "linux/amd64"
